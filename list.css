@@ -1,0 +1,126 @@
+:root {
+    /* 4 COLORS ONLY */
+    --color-1: #1F2937; /* Dark Gray - Header, Add button, Text */
+    --color-2: #FFFFFF; /* White - Background */
+    --color-3: #E5E7EB; /* Light Gray - Task rows, Input border */
+    --color-4: #3B82F6; /* Blue - Edit/Delete buttons */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--color-3);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: gray;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: navy;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--color-3);
+    border-radius: 6px;
+    font-size: 1rem;
+    color: var(--color-1);
+    outline: none;
+}
+#taskInput:focus {
+    border-color: var(--color-4);
+}
+
+#addBtn {
+    padding: 12px;
+    background: red;
+    color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#addBtn:hover {
+    opacity: 0.85;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: RGB 13,17,23;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.task-text {
+    color: var(--color-1);
+    font-size: 1rem;
+    flex: 1;
+    word-break: break-word;
+    cursor: pointer;
+}
+.task-text.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-4);
+    color: var(--color-2);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid var(--color-4);
+    border-radius: 4px;
+    font-size: 1rem;
+}
